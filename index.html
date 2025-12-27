@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imara Mohideen | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <label class="switch" for="darkToggle">
+        <span class="visually-hidden"></span>
+        <input type="checkbox" id="darkToggle" title="Toggle dark mode">
+        <span class="slider"></span>
+      </label>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-image animated-fade-left">
+        <img src="Imara.png" alt="Imara Mohideen" class="profile-photo" />
+      </div>
+      <div class="hero-text">
+        <h2 class="animated-text">
+          Aspiring <span class="highlight">Web Developer</span> & <span class="highlight">UI/UX Designer</span>
+        </h2>
+        <p class="animated-subtext">Crafting simple, meaningful, and interactive digital experiences.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('web', event)">Web Development</button>
+    <button class="tab-button" onclick="showTab('uiux', event)">UI/UX Design</button>
+    <button class="tab-button" onclick="showTab('graphics', event)">Graphic Design</button>
+    <button class="tab-button" onclick="showTab('mobile', event)">Mobile Apps</button>
+  </div>
+
+  <div class="tab-content active" id="web">
+    <div class="project-grid">
+      <div class="project-tile">
+        <img src="web-project.jpg" alt="Smart Dustbin" />
+        <div class="tile-content">
+          <h3>Smart Dustbin Web App</h3>
+          <p>A smart dashboard with login, contact form, and map features.</p>
+          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="uiux">
+    <div class="project-grid">
+      <div class="project-tile">
+        <img src="icons/html.png" alt="Nature Capsule Design" />
+        <div class="tile-content">
+          <h3>Nature Capsule</h3>
+          <p>Interactive UI/UX design project for environmental awareness.</p>
+          <p><strong>Tool:</strong> Figma</p>
+          <a href="#"> View Prototype</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="graphics">
+    <div class="project-grid">
+      <div class="project-tile">
+        <img src="graphics.jpg" alt="Event Posters" />
+        <div class="tile-content">
+          <h3>Event Poster Designs</h3>
+          <p>Posters designed for university events and environmental awareness.</p>
+          <p><strong>Tool:</strong> Canva, Photoshop</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="mobile">
+    <div class="project-grid">
+      <div class="project-tile">
+        <img src="mobile-app.jpg" alt="Food Finder App" />
+        <div class="tile-content">
+          <h3>Food Finder App</h3>
+          <p>Mobile app UI with voice search, filters, and recipe suggestions.</p>
+          <p><strong>Tool:</strong> Figma</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section>
+    <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <img src="icons/html.png" alt="HTML" />
+      <span>HTML</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/css3.svg" alt="CSS" />
+      <span>CSS</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/javascript.svg" alt="JavaScript" />
+      <span>JavaScript</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/java.svg" alt="Java" />
+      <span>Java</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/cpp.svg" alt="C++" />
+      <span>C++</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/figma.svg" alt="Figma" />
+      <span>Figma</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/photoshop.svg" alt="Photoshop" />
+      <span>Photoshop</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/canva.svg" alt="Canva" />
+      <span>Canva</span>
+    </div>
+    <div class="skill-card">
+      <img src="icons/github.svg" alt="GitHub" />
+      <span>GitHub</span>
+    </div>
+  </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="mailto:imara@example.com">Email</a>
+      <a href="https://github.com/imaramohideen" target="_blank">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Imara Mohideen. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
