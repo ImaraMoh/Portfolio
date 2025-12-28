@@ -1,3 +1,20 @@
+// Scroll-triggered fade-in effect
+function handleScrollFade() {
+  const elements = document.querySelectorAll('.fade-in-on-scroll');
+  const windowBottom = window.innerHeight + window.scrollY;
+
+  elements.forEach(el => {
+    const elementTop = el.offsetTop + 100; // adjust 100px to trigger earlier/later
+    if (windowBottom > elementTop) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScrollFade);
+window.addEventListener('load', handleScrollFade);
+
+
 /* ===============================
    PROJECT TAB SWITCHING
 ================================ */
@@ -54,8 +71,8 @@ const particlesOptionsLight = {
     modes: { repulse: { distance: 100, duration: 0.4 } }
   },
   particles: {
-    color: { value: "#00bcd4" },
-    links: { enable: true, color: "#00bcd4", distance: 150, opacity: 0.4, width: 1 },
+    color: { value: "#6d00d4" },
+    links: { enable: true, color: "#6d00d4", distance: 150, opacity: 0.4, width: 1 },
     move: { enable: true, speed: 2, outModes: "bounce" },
     number: { value: 60, density: { enable: true, area: 800 } },
     opacity: { value: 0.5 },
@@ -91,3 +108,49 @@ if (darkToggle) {
     );
   });
 }
+
+/* ===============================
+   Typing Effects
+================================ */
+const typingElement = document.getElementById('typing-effect');
+const statuses = [
+  "Software Engineer",
+  "Web Developer",
+  "App Developer",
+  "Fullstack Developer",
+];
+let statusIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeStatus() {
+  const currentStatus = statuses[statusIndex];
+
+  if (!isDeleting) {
+    // Typing
+    typingElement.textContent = currentStatus.slice(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentStatus.length) {
+      isDeleting = true;
+      setTimeout(typeStatus, 2000); // Pause before deleting
+    } else {
+      setTimeout(typeStatus, 100); // Typing speed
+    }
+  } else {
+    // Deleting
+    typingElement.textContent = currentStatus.slice(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      statusIndex = (statusIndex + 1) % statuses.length; // Move to next status
+      setTimeout(typeStatus, 500); // Pause before typing next status
+    } else {
+      setTimeout(typeStatus, 50); // Deleting speed
+    }
+  }
+}
+
+// Initialize Typing Effect
+typeStatus();
