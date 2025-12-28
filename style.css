@@ -23,6 +23,15 @@ footer {
   color: white;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .dark-mode header,
 .dark-mode footer {
   background: #1e1e1e;
