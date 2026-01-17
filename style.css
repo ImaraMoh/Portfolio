@@ -670,6 +670,71 @@ html, body {
   overflow-x: hidden;
 }
 
+/* ===========================
+   PROJECTS MOBILE FIXES
+=========================== */
+@media (max-width: 768px) {
+  .projects-list {
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-desc,
+  .project-role {
+    font-size: 0.95rem;
+  }
+
+  .project-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tech-icons {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 0.8rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-desc,
+  .project-role {
+    font-size: 0.9rem;
+  }
+
+  .tech-icons i {
+    font-size: 1.1rem;
+  }
+}
+
+
 /* ======================================
    MOBILE DEVICES (≤ 767px)
 ====================================== */
