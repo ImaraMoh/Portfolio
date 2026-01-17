@@ -666,7 +666,7 @@ html, body {
   }
 
   .switch {
-    position: fixed;
+    position: relative;
     width: 40px;
     left: auto;
     right: 10px;
@@ -839,5 +839,85 @@ html, body {
     width: 85px;
     height: 85px;
   }
+}
+
+
+/* ==========================
+   HAMBURGER MENU
+========================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--text-invert);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Mobile nav hidden by default */
+#nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    width: 100%;
+    background: var(--bg-header);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+    z-index: 999;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: left;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  nav ul {
+    margin-left: 0;
+  }
+
+  nav h1 {
+    font-size: large;
+  }
+}
+
+/* Hamburger animation when open */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 

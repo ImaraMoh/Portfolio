@@ -17,11 +17,22 @@
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER and NAV SECTION -->
   <header>
-    <nav>
-      <h1>Imara Mohideen</h1>
-      <ul>
+    <nav class="nav-container">
+
+      <!-- LEFT : Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- CENTER : Title -->
+      <h1 class="nav-title">Imara Mohideen</h1>
+
+      <!-- NAV LINKS -->
+      <ul id="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -29,11 +40,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- Dark Mode Toggle -->
+      <!-- RIGHT : Dark Mode -->
       <label class="switch">
         <input type="checkbox" id="darkToggle" />
         <span class="slider"></span>
       </label>
+
     </nav>
   </header>
 

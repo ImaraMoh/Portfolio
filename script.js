@@ -16,6 +16,39 @@ window.addEventListener('load', handleScrollFade);
 
 
 /* ===============================
+   Hambuger Menu Toggle
+================================ */
+// Toggle hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+// Smooth scroll considering fixed header
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const headerOffset = document.querySelector('header').offsetHeight;
+    const elementPosition = target.offsetTop;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
+    // Close menu on click
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
+
+/* ===============================
    PROJECT
 ================================ */
   // Read More toggle
