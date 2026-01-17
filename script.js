@@ -16,18 +16,34 @@ window.addEventListener('load', handleScrollFade);
 
 
 /* ===============================
-   PROJECT TAB SWITCHING
+   PROJECT
 ================================ */
-function showTab(tabId, event) {
-  const allTabs = document.querySelectorAll('.tab-content');
-  const allButtons = document.querySelectorAll('.tab-button');
+  // Read More toggle
+  document.querySelectorAll(".read-more-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".project-content");
+      card.querySelector(".short").style.display = "none";
+      card.querySelector(".full").style.display = "block";
+      btn.style.display = "none";
+    });
+  });
 
-  allTabs.forEach(tab => tab.classList.remove('active'));
-  allButtons.forEach(btn => btn.classList.remove('active'));
+  // View More Projects
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const hiddenProjects = document.querySelectorAll(".project-card.hidden");
+  let index = 0;
 
-  document.getElementById(tabId).classList.add('active');
-  event.target.classList.add('active');
-}
+  viewMoreBtn.addEventListener("click", () => {
+    for (let i = index; i < index + 3 && i < hiddenProjects.length; i++) {
+      hiddenProjects[i].style.display = "flex";
+    }
+    index += 3;
+
+    if (index >= hiddenProjects.length) {
+      viewMoreBtn.style.display = "none";
+    }
+  });
+
 
 /* ===============================
    SMOOTH SCROLL FOR NAVBAR

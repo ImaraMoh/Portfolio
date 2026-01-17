@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imara Mohideen | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -19,7 +20,7 @@
   <!-- HEADER / NAVBAR -->
   <header>
     <nav>
-      <h1>My Portfolio</h1>
+      <h1>Imara Mohideen</h1>
       <ul>
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -44,7 +45,7 @@
       </div>
 
       <div class="hero-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <h2>Hi, I'm <span class="highlight">Imara Mohideen</span></h2>
+          <h1>Hi, I'm <span class="highlight">Imara Mohideen</span></h1>
           <p>Undergraduate in Computer Engineering</p>
           <p class="dynamic-status">I am a <span id="typing-effect"></span></p>
         </div>
@@ -54,94 +55,228 @@
   <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
+
     <div class="about-content fade-in-on-scroll">
-      <p>
-        I am <strong>Imara Mohideen</strong>, an aspiring <strong>Web Developer</strong> and <strong>UI/UX Designer</strong> with a passion for creating intuitive, interactive, and visually appealing digital experiences. Ever since I started exploring the world of technology, I have been fascinated by how thoughtful design and clean code can solve real-world problems.
+      <p class="professional-summary">
+        I am <strong>Imara Mohideen</strong>, an aspiring <strong>Web Developer</strong> and <strong>UI/UX Designer</strong> focused on creating clean, user-centered, and visually engaging digital experiences. I combine frontend development with thoughtful design to build intuitive and meaningful interfaces.
       </p>
-      <p>
-        I have experience in <strong>web development</strong>, including <strong>HTML, CSS, JavaScript, and Java</strong>, and have completed self-driven projects that combine <strong>frontend development with UI/UX principles</strong>. Beyond web development, I enjoy experimenting with <strong>graphic design tools like Figma, Canva, and Photoshop</strong> to bring creative concepts to life.
-      </p>
-      <p>
-        I am a <strong>lifelong learner</strong>, constantly exploring new technologies, frameworks, and design trends to expand my skill set. I thrive in collaborative environments and believe that effective communication, attention to detail, and empathy are crucial to building products that users love.
-      </p>
-      <p>
-        When I am not coding or designing, I enjoy researching innovative solutions for digital interfaces, participating in community projects, and exploring creative ways to combine design with functionality. My goal is to contribute to projects that not only work efficiently but also deliver meaningful user experiences.
-      </p>
-      <p>
-        I am enthusiastic about taking on challenges, learning from every project, and evolving as a <strong>multifaceted digital creator</strong>. With every line of code I write and every design I craft, I aim to make technology <strong>accessible, engaging, and enjoyable</strong> for everyone.
-      </p>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+      <!-- CENTERED ACTION BUTTONS -->
+      <div class="about-actions center-actions">
+        <a href="Imara_Mohideen_Resume.pdf" download class="btn primary-btn">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab-button active" onclick="showTab('web', event)">Web Development</button>
-      <button class="tab-button" onclick="showTab('uiux', event)">UI/UX Design</button>
-      <button class="tab-button" onclick="showTab('graphics', event)">Graphic Design</button>
-      <button class="tab-button" onclick="showTab('mobile', event)">Mobile Apps</button>
-    </div>
-
-    <!-- Web -->
-    <div class="tab-content active" id="web">
-      <div class="project-grid">
-        <div class="project-tile">
-          <img src="web-project.jpg" alt="Smart Dustbin" />
-          <div class="tile-content">
-            <h3>Smart Dustbin Web App</h3>
-            <p>A smart dashboard with login, contact form, and map features.</p>
-            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-            <a href="#">Live Demo</a> | <a href="#">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- UI/UX -->
-    <div class="tab-content" id="uiux">
-      <div class="project-grid">
-        <div class="project-tile">
-          <img src="icons/html.png" alt="Nature Capsule" />
-          <div class="tile-content">
-            <h3>Nature Capsule</h3>
-            <p>Interactive UI/UX design for environmental awareness.</p>
-            <p><strong>Tool:</strong> Figma</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Graphics -->
-    <div class="tab-content" id="graphics">
-      <div class="project-grid">
-        <div class="project-tile">
-          <img src="graphics.jpg" alt="Graphic Design" />
-          <div class="tile-content">
-            <h3>Event Poster Designs</h3>
-            <p>Posters for university and environmental events.</p>
-            <p><strong>Tools:</strong> Canva, Photoshop</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile -->
-    <div class="tab-content" id="mobile">
-      <div class="project-grid">
-        <div class="project-tile">
-          <img src="mobile-app.jpg" alt="Food Finder App" />
-          <div class="tile-content">
-            <h3>Food Finder App</h3>
-            <p>Mobile UI with voice search and filters.</p>
-            <p><strong>Tool:</strong> Figma</p>
-          </div>
-        </div>
+        <a href="https://www.linkedin.com/in/your-linkedin-username"
+          target="_blank"
+          class="btn outline-btn">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-list">
+
+    <!-- 1. RentHub -->
+    <article class="project-card">
+      <div class="project-image">
+        <img src="images/renthub.jpg" alt="RentHub">
+      </div>
+
+      <div class="project-content">
+        <h3>RentHub</h3>
+        <span class="project-type">Group Project</span>
+
+        <p class="project-desc short">
+          A rental marketplace platform connecting renters and owners with secure listings.
+        </p>
+
+        <p class="project-desc full">
+          A full-featured rental marketplace with user authentication, listings, image uploads,
+          and booking flow. Designed with scalability and usability in mind.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-node-js"></i>
+          <i class="fa-solid fa-database"></i>
+          <i class="fa-brands fa-docker"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. FoundIt -->
+    <article class="project-card">
+      <div class="project-image">
+        <img src="images/foundit.jpg" alt="FoundIt">
+      </div>
+
+      <div class="project-content">
+        <h3>FoundIt – Digital Lost & Found</h3>
+        <span class="project-type">Group Project</span>
+
+        <p class="project-desc short">
+          MERN-based system for reporting and tracking lost items efficiently.
+        </p>
+
+        <p class="project-desc full">
+          Enables users to report lost and found items with images, location, and status tracking.
+          Includes authentication and cloud image storage.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-node-js"></i>
+          <i class="fa-solid fa-database"></i>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Portfolio -->
+    <article class="project-card">
+      <div class="project-image">
+        <img src="images/portfolio.png" alt="Portfolio">
+      </div>
+
+      <div class="project-content">
+        <h3>My Personal Portfolio</h3>
+        <span class="project-type individual">Individual Project</span>
+
+        <p class="project-desc short">
+          my personal portfolio website with skills and projects.
+        </p>
+
+        <p class="project-desc full">
+          Using HTML, CSS, and JavaScript to create a responsive portfolio,
+          showcasing my skills, projects, and contact information.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. DustBin (HIDDEN) -->
+    <article class="project-card hidden">
+      <div class="project-image">
+        <img src="images/dustbin.png" alt="Smart Dustbin">
+      </div>
+
+      <div class="project-content">
+        <h3>Smart DustBin Web Application</h3>
+        <span class="project-type">Group Project</span>
+
+        <p class="project-desc short">
+          Smart dashboard to monitor waste management systems.
+        </p>
+
+        <p class="project-desc full">
+          Real-time monitoring dashboard with authentication and map integration
+          for smart city waste management.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+          <i class="fa-brands fa-js"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Cookify (HIDDEN) -->
+    <article class="project-card hidden">
+      <div class="project-image">
+        <img src="images/cookify.jpg" alt="Cookify">
+      </div>
+
+      <div class="project-content">
+        <h3>Cookify – Food App UI</h3>
+        <span class="project-type individual">Individual Project</span>
+
+        <p class="project-desc short">
+          Food discovery app UI with smart filters.
+        </p>
+
+        <p class="project-desc full">
+          Designed a modern food app UI featuring ingredient-based search,
+          meal planning, and clean UX flows.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-figma"></i>
+          <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Nature Capsule (HIDDEN) -->
+    <article class="project-card hidden">
+      <div class="project-image">
+        <img src="images/nature_capsule.png" alt="Nature Capsule">
+      </div>
+
+      <div class="project-content">
+        <h3>Nature Capsule – UI/UX Case Study</h3>
+        <span class="project-type individual">Individual Project</span>
+
+        <p class="project-desc short">
+          Environmental awareness UI/UX storytelling project.
+        </p>
+
+        <p class="project-desc full">
+          A design-focused case study emphasizing user empathy,
+          storytelling, and interactive educational experiences.
+        </p>
+
+        <div class="tech-icons">
+          <i class="fa-brands fa-figma"></i>
+        </div>
+
+        <div class="project-actions">
+          <button class="read-more-btn">Read More</button>
+          <a href="#" target="_blank"><i class="fa-brands fa-figma"></i></a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="view-more-wrapper">
+    <button id="viewMoreBtn" class="btn primary-btn">View More Projects</button>
+  </div>
+</section>
 
   <!-- SKILLS -->
   <!-- Include Font Awesome in your <head> -->
